@@ -18,7 +18,7 @@ body {
 input,select{
   outline: none;
 }
-#root{
+#roots{
   width: 100%;
 }
 .batch_heart{
