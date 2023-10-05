@@ -18,6 +18,9 @@ body {
 input,select{
   outline: none;
 }
+#root{
+  width: 100%;
+}
 .batch_heart{
   background: tomato;
   width: 15px;
