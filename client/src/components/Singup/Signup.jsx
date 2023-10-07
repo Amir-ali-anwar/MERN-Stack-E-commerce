@@ -11,6 +11,14 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
   const [avatar, setAvatar] = useState(null);
+  console.log(avatar?.name);
+  const handleFileChange=(e)=>{
+  const file=e.target.files[0]
+  console.log(file);   
+  setAvatar(file)
+    // console.log(reader.readAsDataURL());
+    // reader.readAsDataURL(e.target.files[0]);
+  }
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -122,6 +130,7 @@ const Signup = () => {
                     id="file-input"
                     accept=".jpg,.jpeg,.png"
                     className="sr-only"
+                    onChange={handleFileChange}
                   />
                 </label>
               </div>
