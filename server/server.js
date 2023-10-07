@@ -1,5 +1,5 @@
 const app = require("./app");
-const connectDatabase = require("./db/Database");
+const connectDatabase = require('./db/Databsae');
 
 // Handling uncaught Exception
 process.on("uncaughtException", (err) => {
@@ -27,7 +27,7 @@ const server = app.listen(process.env.PORT, () => {
 
 // unhandled promise rejection
 
-process.on('unhandledRejection', () => {
+process.on('unhandledRejection', (err) => {
     console.log(`Shutting down the server for ${err.message}`);
     console.log(`shutting down the server for unhandled promise rejection`);
     server.close(() => {
